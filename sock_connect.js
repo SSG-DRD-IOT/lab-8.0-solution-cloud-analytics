@@ -1,6 +1,7 @@
 var json;
 var myDeviceId = "";
- var socket = io.connect('http://192.168.11.19:9002');
+
+ var socket = io.connect(window.location.href);
  socket.on('connect', function(data) {
     alert("Connected");
  socket.on('plotdata', function(data) {
