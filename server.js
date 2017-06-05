@@ -33,6 +33,7 @@ console.log(req.query);
 	}
    io.sockets.emit("plotdata", JSON.stringify(data));
    res.status(201).send("Successfully updated");
+   res.end();
 });
 
 server.listen(9002);
